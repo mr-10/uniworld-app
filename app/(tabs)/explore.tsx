@@ -25,6 +25,7 @@ export default function ExploreScreen() {
     intakeSeasons: [] as string[],
     types: [] as string[],
     acceptanceRateRange: [0, 100] as [number, number],
+    highAcceptanceOnly: false,
   });
 
   const filteredUniversities = useMemo(() => {
@@ -56,9 +57,18 @@ export default function ExploreScreen() {
     }));
   };
 
+  const toggleHighAcceptanceOnly = () => {
+    setFilters((prev) => ({
+      ...prev,
+      highAcceptanceOnly: !prev.highAcceptanceOnly,
+      acceptanceRateRange: !prev.highAcceptanceOnly ? [35, 100] : [0, 100],
+    }));
+  };
+
   const renderUniversityCard = ({ item }: { item: any }) => {
     const saved = isSaved(item.id);
     const scholarshipCount = item.scholarships?.length || 0;
+    const isHighAcceptance = item.acceptanceRate > 35;
 
     return (
       <Pressable
@@ -71,7 +81,7 @@ export default function ExploreScreen() {
             borderRadius: 12,
             padding: 12,
             borderWidth: 1,
-            borderColor: colors.border,
+            borderColor: isHighAcceptance ? colors.success : colors.border,
             opacity: pressed ? 0.7 : 1,
           },
         ]}
@@ -84,7 +94,7 @@ export default function ExploreScreen() {
             <Text style={{ fontSize: 13, color: colors.muted, marginBottom: 8 }}>
               {item.country} • {item.city}
             </Text>
-            <View style={{ flexDirection: "row", gap: 8, marginBottom: 8 }}>
+            <View style={{ flexDirection: "row", gap: 8, marginBottom: 8, flexWrap: "wrap" }}>
               <View
                 style={{
                   backgroundColor: colors.primary,
@@ -99,14 +109,14 @@ export default function ExploreScreen() {
               </View>
               <View
                 style={{
-                  backgroundColor: colors.accent,
+                  backgroundColor: isHighAcceptance ? colors.success : colors.accent,
                   paddingHorizontal: 8,
                   paddingVertical: 4,
                   borderRadius: 6,
                 }}
               >
                 <Text style={{ fontSize: 12, color: "white", fontWeight: "600" }}>
-                  {item.acceptanceRate}%
+                  {item.acceptanceRate}% {isHighAcceptance ? "✓" : ""}
                 </Text>
               </View>
             </View>
@@ -179,7 +189,7 @@ export default function ExploreScreen() {
           ]}
         >
           <Text style={{ fontSize: 14, fontWeight: "600", color: "white" }}>
-            Filters
+            Filters ({filteredUniversities.length})
           </Text>
           <Ionicons
             name={showFilters ? "chevron-up" : "chevron-down"}
@@ -215,6 +225,28 @@ export default function ExploreScreen() {
                 }}
               >
                 Has Scholarships
+              </Text>
+            </Pressable>
+
+            <Pressable
+              onPress={toggleHighAcceptanceOnly}
+              style={{
+                paddingHorizontal: 12,
+                paddingVertical: 6,
+                borderRadius: 20,
+                backgroundColor: filters.highAcceptanceOnly ? colors.success : colors.surface,
+                borderWidth: 1,
+                borderColor: filters.highAcceptanceOnly ? colors.success : colors.border,
+              }}
+            >
+              <Text
+                style={{
+                  fontSize: 12,
+                  fontWeight: "600",
+                  color: filters.highAcceptanceOnly ? "white" : colors.foreground,
+                }}
+              >
+                High Acceptance (35%+)
               </Text>
             </Pressable>
           </ScrollView>

@@ -10,7 +10,7 @@ export function useUniversities() {
   useEffect(() => {
     try {
       setIsLoading(true);
-      setUniversities(universitiesData.universities as University[]);
+      setUniversities(universitiesData.universities as unknown as University[]);
       setError(null);
     } catch (err) {
       setError(err instanceof Error ? err.message : "Failed to load universities");
