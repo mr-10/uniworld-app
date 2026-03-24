@@ -1,0 +1,349 @@
+{
+  "universities": [
+    {
+      "id": "1",
+      "name": "Harvard University",
+      "country": "United States",
+      "countryCode": "US",
+      "city": "Cambridge, MA",
+      "website": "https://www.harvard.edu",
+      "admissionEmail": "admissions@harvard.edu",
+      "ranking": 4,
+      "rankingSource": "QS",
+      "tuition": {
+        "undergraduate": 60000,
+        "postgraduate": 65000
+      },
+      "acceptanceRate": 3.2,
+      "studentPopulation": 23000,
+      "type": "Private",
+      "language": "English",
+      "intakeSeasons": [
+        "Fall"
+      ],
+      "programs": [
+        "Engineering",
+        "Medicine",
+        "Business",
+        "Law",
+        "Arts",
+        "Sciences"
+      ],
+      "applicationDeadlines": {
+        "Fall": "2024-01-01"
+      },
+      "scholarships": [
+        {
+          "id": "s1",
+          "name": "Harvard Financial Aid",
+          "amount": 75000,
+          "eligibility": "All international students",
+          "deadline": "2024-01-15"
+        },
+        {
+          "id": "s2",
+          "name": "Harvard Merit Scholarship",
+          "amount": 50000,
+          "eligibility": "Top 10% students",
+          "deadline": "2024-01-15"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Stanford University",
+      "country": "United States",
+      "countryCode": "US",
+      "city": "Stanford, CA",
+      "website": "https://www.stanford.edu",
+      "admissionEmail": "admissions@stanford.edu",
+      "ranking": 5,
+      "rankingSource": "QS",
+      "tuition": {
+        "undergraduate": 62000,
+        "postgraduate": 68000
+      },
+      "acceptanceRate": 3.7,
+      "studentPopulation": 17000,
+      "type": "Private",
+      "language": "English",
+      "intakeSeasons": [
+        "Fall"
+      ],
+      "programs": [
+        "Engineering",
+        "Business",
+        "Computer Science",
+        "Medicine",
+        "Law"
+      ],
+      "applicationDeadlines": {
+        "Fall": "2024-01-05"
+      },
+      "scholarships": [
+        {
+          "id": "s3",
+          "name": "Stanford Fellowship",
+          "amount": 80000,
+          "eligibility": "International students with excellent academics",
+          "deadline": "2024-01-05"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "name": "MIT",
+      "country": "United States",
+      "countryCode": "US",
+      "city": "Cambridge, MA",
+      "website": "https://www.mit.edu",
+      "admissionEmail": "admissions@mit.edu",
+      "ranking": 1,
+      "rankingSource": "QS",
+      "tuition": {
+        "undergraduate": 62000,
+        "postgraduate": 70000
+      },
+      "acceptanceRate": 2.7,
+      "studentPopulation": 11500,
+      "type": "Private",
+      "language": "English",
+      "intakeSeasons": [
+        "Fall"
+      ],
+      "programs": [
+        "Engineering",
+        "Computer Science",
+        "Physics",
+        "Chemistry",
+        "Business"
+      ],
+      "applicationDeadlines": {
+        "Fall": "2024-01-01"
+      },
+      "scholarships": [
+        {
+          "id": "s7",
+          "name": "MIT Financial Aid",
+          "amount": 85000,
+          "eligibility": "All admitted students",
+          "deadline": "2024-01-01"
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "name": "University of Oxford",
+      "country": "United Kingdom",
+      "countryCode": "UK",
+      "city": "Oxford",
+      "website": "https://www.ox.ac.uk",
+      "admissionEmail": "admissions@ox.ac.uk",
+      "ranking": 3,
+      "rankingSource": "QS",
+      "tuition": {
+        "undergraduate": 45000,
+        "postgraduate": 50000
+      },
+      "acceptanceRate": 4.0,
+      "studentPopulation": 24000,
+      "type": "Public",
+      "language": "English",
+      "intakeSeasons": [
+        "Fall"
+      ],
+      "programs": [
+        "Engineering",
+        "Medicine",
+        "Law",
+        "Business",
+        "Humanities",
+        "Sciences"
+      ],
+      "applicationDeadlines": {
+        "Fall": "2024-01-20"
+      },
+      "scholarships": [
+        {
+          "id": "s4",
+          "name": "Oxford Scholarship Fund",
+          "amount": 60000,
+          "eligibility": "International students",
+          "deadline": "2024-01-20"
+        },
+        {
+          "id": "s5",
+          "name": "Rhodes Scholarship",
+          "amount": 100000,
+          "eligibility": "Commonwealth citizens",
+          "deadline": "2024-09-15"
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "name": "University of Cambridge",
+      "country": "United Kingdom",
+      "countryCode": "UK",
+      "city": "Cambridge",
+      "website": "https://www.cam.ac.uk",
+      "admissionEmail": "admissions@cam.ac.uk",
+      "ranking": 2,
+      "rankingSource": "QS",
+      "tuition": {
+        "undergraduate": 45000,
+        "postgraduate": 50000
+      },
+      "acceptanceRate": 3.5,
+      "studentPopulation": 20000,
+      "type": "Public",
+      "language": "English",
+      "intakeSeasons": [
+        "Fall"
+      ],
+      "programs": [
+        "Engineering",
+        "Medicine",
+        "Law",
+        "Business",
+        "Mathematics",
+        "Sciences"
+      ],
+      "applicationDeadlines": {
+        "Fall": "2024-01-15"
+      },
+      "scholarships": [
+        {
+          "id": "s6",
+          "name": "Cambridge International Scholarship",
+          "amount": 70000,
+          "eligibility": "International students",
+          "deadline": "2024-01-15"
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "name": "University of Toronto",
+      "country": "Canada",
+      "countryCode": "CA",
+      "city": "Toronto, ON",
+      "website": "https://www.utoronto.ca",
+      "admissionEmail": "admissions@utoronto.ca",
+      "ranking": 21,
+      "rankingSource": "QS",
+      "tuition": {
+        "undergraduate": 35000,
+        "postgraduate": 40000
+      },
+      "acceptanceRate": 6.0,
+      "studentPopulation": 95000,
+      "type": "Public",
+      "language": "English",
+      "intakeSeasons": [
+        "Fall"
+      ],
+      "programs": [
+        "Engineering",
+        "Medicine",
+        "Business",
+        "Law",
+        "Computer Science"
+      ],
+      "applicationDeadlines": {
+        "Fall": "2024-03-01"
+      },
+      "scholarships": [
+        {
+          "id": "s8",
+          "name": "University of Toronto International Scholarship",
+          "amount": 50000,
+          "eligibility": "International students",
+          "deadline": "2024-03-01"
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "name": "University of Melbourne",
+      "country": "Australia",
+      "countryCode": "AU",
+      "city": "Melbourne, VIC",
+      "website": "https://www.unimelb.edu.au",
+      "admissionEmail": "admissions@unimelb.edu.au",
+      "ranking": 37,
+      "rankingSource": "QS",
+      "tuition": {
+        "undergraduate": 40000,
+        "postgraduate": 45000
+      },
+      "acceptanceRate": 8.0,
+      "studentPopulation": 48000,
+      "type": "Public",
+      "language": "English",
+      "intakeSeasons": [
+        "Fall"
+      ],
+      "programs": [
+        "Engineering",
+        "Medicine",
+        "Law",
+        "Business",
+        "Sciences"
+      ],
+      "applicationDeadlines": {
+        "Fall": "2024-05-31"
+      },
+      "scholarships": [
+        {
+          "id": "s10",
+          "name": "Melbourne International Scholarship",
+          "amount": 55000,
+          "eligibility": "International students",
+          "deadline": "2024-05-31"
+        }
+      ]
+    },
+    {
+      "id": "8",
+      "name": "National University of Singapore",
+      "country": "Singapore",
+      "countryCode": "SG",
+      "city": "Singapore",
+      "website": "https://www.nus.edu.sg",
+      "admissionEmail": "admissions@nus.edu.sg",
+      "ranking": 11,
+      "rankingSource": "QS",
+      "tuition": {
+        "undergraduate": 32000,
+        "postgraduate": 37000
+      },
+      "acceptanceRate": 5.0,
+      "studentPopulation": 38000,
+      "type": "Public",
+      "language": "English",
+      "intakeSeasons": [
+        "Fall"
+      ],
+      "programs": [
+        "Engineering",
+        "Medicine",
+        "Law",
+        "Business",
+        "Sciences"
+      ],
+      "applicationDeadlines": {
+        "Fall": "2024-03-31"
+      },
+      "scholarships": [
+        {
+          "id": "s53",
+          "name": "NUS Scholarship",
+          "amount": 50000,
+          "eligibility": "International students",
+          "deadline": "2024-03-31"
+        }
+      ]
+    }
+  ]
+}
