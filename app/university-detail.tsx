@@ -4,6 +4,7 @@ import { ScreenContainer } from "@/components/screen-container";
 import { useLocalSearchParams, useRouter } from "expo-router";
 import { useUniversities } from "@/hooks/use-universities";
 import { useApp } from "@/lib/context/app-context";
+import { useAuth } from "@/lib/context/auth-context";
 import { useColors } from "@/hooks/use-colors";
 import { Ionicons } from "@expo/vector-icons";
 import * as Clipboard from "expo-clipboard";
@@ -12,6 +13,7 @@ import * as Linking from "expo-linking";
 export default function UniversityDetailScreen() {
   const router = useRouter();
   const colors = useColors();
+  const { user } = useAuth();
   const { id } = useLocalSearchParams<{ id: string }>();
   const { getUniversityById } = useUniversities();
   const { isSaved, addSavedUniversity, removeSavedUniversity, addToComparison } = useApp();
@@ -36,7 +38,7 @@ Subject: Inquiry Regarding Admission — [Desired Program]
 
 Dear Admissions Office,
 
-I hope this message finds you well. My name is [Your Name], a student from [Your Country], and I am writing to express my interest in applying to ${university.name} for the [Desired Program] program, commencing [Intended Intake Year].
+I hope this message finds you well. My name is ${user?.name || "[Your Name]"}, a student from [Your Country], and I am writing to express my interest in applying to ${university.name} for the [Desired Program] program, commencing [Intended Intake Year].
 
 I would be grateful if you could kindly provide information regarding:
 1. Admission requirements and application procedures
@@ -46,9 +48,9 @@ I would be grateful if you could kindly provide information regarding:
 Thank you for your time and I look forward to your response.
 
 Sincerely,
-[Your Name]
-[Your Email Address]
-[Your Phone Number]`;
+${user?.name || "[Your Name]"}
+${user?.email || "[Your Email Address]"}
+${user?.phone || "[Your Phone Number]"}`;
     setEmailBody(template);
   };
 

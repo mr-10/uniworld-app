@@ -57,10 +57,45 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="checklist"
+        name="index"
         options={{
-          title: "Checklist",
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="checkmark.circle.fill" color={color} />,
+          title: "Home",
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="explore"
+        options={{
+          title: "Explore",
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="magnifyingglass" color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="scholarships"
+        options={{
+          title: "Scholarships",
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="gift.fill" color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="mylist"
+        options={{
+          title: "My List",
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="bookmark.fill" color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="calendar"
+        options={{
+          title: "Calendar",
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="calendar" color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="settings"
+        options={{
+          title: "Settings",
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="gear" color={color} />,
         }}
       />
     </Tabs>
